@@ -1,0 +1,6 @@
+BEGIN
+ Input math,phy,che
+ Ave=(math+phy+che)/3
+  Display ave
+END
+       
