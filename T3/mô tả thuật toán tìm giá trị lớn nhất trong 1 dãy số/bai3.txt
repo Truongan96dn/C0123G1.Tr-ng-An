@@ -1,0 +1,5 @@
+Begin
+     Input n ( là cố lượng phần tử ), 
+     Input a1,a2,a3..an
+   
+           

@@ -1,0 +1,16 @@
+Begin 
+ Input a là số điểm của sinh viên ( 0<=a<=100)
+ IF a>=75
+   Display loai A
+ Else if ( 60<=a<75)
+      Display rep loai B
+      Else if ( 45<=a<60)
+         Display loai C
+           Else if(35<=a<45)
+             Display loai D
+ Else 
+    Display loai E
+ END IF
+ END               
+ 
+    
