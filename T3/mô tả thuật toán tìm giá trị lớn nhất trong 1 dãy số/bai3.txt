@@ -1,5 +1,14 @@
 Begin
-     Input n ( là cố lượng phần tử ), 
+     Input n , 
      Input a1,a2,a3..an
-   
+     max=a1
+     While (I<=n)
+       Do if max<ai
+          Display max=ai
+          
+          Else 
+           Display max
+       i=i+1
+      END DO
+END
            
