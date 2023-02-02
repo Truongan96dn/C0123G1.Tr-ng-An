@@ -1,0 +1,13 @@
+Begin
+ Input a,b,c
+ If a>b
+    If a>c
+      Display  a co GTLN
+    Else 
+      Display  c co GTLN
+ Else if b>c
+    Display b co GTLN
+     Else 
+       Display c co gtln
+ End if
+ End
