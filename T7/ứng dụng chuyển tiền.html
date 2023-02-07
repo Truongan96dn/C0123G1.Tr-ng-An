@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung dung chuyen doi tien te</title>
+</head>
+<body>
+<table style="width: 20px;height: 20px;border-spacing: 20px;" border="2">
+  <tr>
+    <th>Amount</th>
+    <th>From Currency</th>
+    <th>To Currency</th>
+  </tr>
+  <tr>
+    <td> <input type="text" id="Amount"</td>
+    <td>
+      <select id="From">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+      </select>
+    </td>
+    <td>
+      <select id="To">
+        <option value="VND">VND</option>
+        <option  value="USD">USD</option>
+      </select>
+    </td>
+
+
+  <tr>
+    <td>
+      <button onclick="Changemoney()">CONVERT</button>
+    </td>
+  </tr>
+
+
+</table>
+<br>
+<p id="Result"></p>
+</body>
+
+</html>
+<script src="transfermoney.js"></script>
+
