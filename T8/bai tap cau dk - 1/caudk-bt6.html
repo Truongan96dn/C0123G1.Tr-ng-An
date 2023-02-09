@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-6</title>
+</head>
+<body>
+<script>
+  let doanhsoA = +prompt("nhap doanh so ban hang A");
+  let doanhsoB = +prompt("doanh so ban hang B");
+  let doanhsoC = +prompt("doanh so ban hang C");
+  let Tongdoanhthu = doanhsoA + doanhsoB + doanhsoC;
+  let hoahong = Tongdoanhthu;
+  if(Tongdoanhthu<10000) {
+    hoahong = (Tongdoanhthu * 2)/100;
+    document.write("hoa hong nhan duoc la : "+ hoahong +"¥");
+  }else {
+    hoahong =( Tongdoanhthu*3)/100;
+    document.write("hoa hong nhan duoc la : " + hoahong+ "¥";
+  }
+
+</script>
+
+</body>
+</html>
