@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-11</title>
+</head>
+<body>
+<script>
+  let  a = +prompt(" Nhap vao thu nhap cua thang  ");
+  let TNCN = a/1000000;
+  if ( TNCN <= 5 ) {
+    let stpn = ((TNCN * 5) / 100) * 1000000;
+    console.log("  so thue phai nop: " + stpn + " VND");
+  }else if ( TNCN <= 10){
+    let stpn = (((TNCN *10)/100)-0.25)*1000000;
+    console.log("  so thue phai nop: " + stpn + " VND");
+  }else if ( TNCN <= 18){
+    let stpn = (((TNCN *15)/100)-0.75)*1000000;
+    console.log("  so thue phai nop: " + stpn + " VND");
+  }else if (TNCN<=32){
+    let stpn = (((TNCN *20)/100)-1.65)*1000000;
+    console.log("  so thue phai nop: " + stpn + " VND");
+  }else if ( TNCN <=52){
+    let stpn = (((TNCN *25)/100)-3.25)*1000000;
+    console.log("  so thue phai nop: " + stpn + " VND");
+  }else if (TNCN <= 80 ){
+    let stpn = (((TNCN *30)/100)-5.85)*1000000;
+    console.log("  so thue phai nop: " + stpn + " VND");
+  }else {
+      let stpn = (((TNCN * 35) / 100) - 9.85) * 1000000;
+      console.log("  so thue phai nop: " + stpn + " VND");
+    }
+
+
+</script>
+
+</body>
+</html>
