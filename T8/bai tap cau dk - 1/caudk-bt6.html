@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-  let doanhsoA = +prompt("nhap doanh so ban hang A");
-  let doanhsoB = +prompt("doanh so ban hang B");
-  let doanhsoC = +prompt("doanh so ban hang C");
-  let Tongdoanhthu = doanhsoA + doanhsoB + doanhsoC;
-  let hoahong = Tongdoanhthu;
-  if(Tongdoanhthu<10000) {
-    hoahong = (Tongdoanhthu * 2)/100;
-    document.write("hoa hong nhan duoc la : "+ hoahong +"¥");
+  let incomeA = +prompt("nhap doanh so ban hang A");
+  let incomeB = +prompt("doanh so ban hang B");
+  let incomeC = +prompt("doanh so ban hang C");
+  let sales = incomeA + incomeB + incomeC;
+  let rose = sales;
+  if(sales<10000) {
+    rose = (sales * 2)/100;
+    document.write("hoa hong nhan duoc la : "+ rose +"¥");
   }else {
-    hoahong =( Tongdoanhthu*3)/100;
-    document.write("hoa hong nhan duoc la : " + hoahong+ "¥";
+    rose =(sales*3)/100;
+    document.write("hoa hong nhan duoc la : " + rose+ "¥";
   }
 
 </script>
