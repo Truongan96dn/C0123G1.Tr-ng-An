@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai8</title>
+</head>
+<body>
+ <button onclick = " doSth()">Let play</button>
+<script>
+  function doSth() {
+    let input = +prompt(" Nhập vào khoảng cần đoán ");
+    let guess = +prompt(" Nhập vào giá trị bạn đoán ")
+    let numberRun = Math.floor(Math.random() * input);
+    console.log(numberRun);
+    let count = 0 ;
+    while ( numberRun !== guess ){
+      count ++;
+      if( count === 3 ){
+        alert(" Ban da het so lan doan !");
+      }else if ( numberRun < guess){
+        alert(" so ban nhap lon hon ");
+      }else{
+        alert(" so ban doan be hon ");
+      }
+      guess = +prompt(" Nhập vào giá trị bạn đoán ")
+
+    }
+    if(count === 3 ){
+      alert(" Ban da het so lan doan");
+    }else {
+      alert(" Bingo !")
+    }
+  }
+</script>
+</body>
+</html>
