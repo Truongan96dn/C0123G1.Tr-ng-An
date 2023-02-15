@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let arr = [11, 10, 14, 20, 16, 17, 18, 4, 6, 19];
+    let v = +prompt();
+    for (let i = 0;i<arr.length-1;i++) {
+        if (v === arr[i]) {
+            arr.splice(i,1);
+            arr.push(0);
+        }
+    }
+    console.log(arr)
+
+
+
+</script>
+</body>
+</html>

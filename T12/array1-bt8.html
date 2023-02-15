@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<script>
+    let arr = [11, 10, 14, 20, 16, 17, 18, 4, 6, 19];
+    let biggestIndex = 0;
+    let temp;
+    for ( let i = 0 ; i< arr.length ; i++){
+        biggestIndex= i
+        for (let j =i+1;j<arr.length;j++){
+            if(arr[j]>arr[biggestIndex]){
+                biggestIndex=j;
+            }
+        }temp = arr[i];
+        arr[i]= arr[biggestIndex];
+        arr[biggestIndex]= temp;
+    }console.log(arr)
+
+
+
+</script>
+</body>
+</html>

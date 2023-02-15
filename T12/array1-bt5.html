@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let str = prompt()
+    // let str = "2,4,6,-2,-4,6,-18,-20"
+    let arrStr = str.split(",")
+    let arrNum = arrStr.map(Number)
+    let count = 0
+    for(let i=0;i<arrNum.length;i++){
+        if(arrNum[i]<0){
+            count++;
+        }
+    }
+    console.log("số nguyên âm có trong mảng là : "+count);
+
+</script>
+</body>
+</html>
