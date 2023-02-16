@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    let input1= prompt("Nhap vao chuoi 1 ");
+    let arrStr= input1.split("");
+    for( let i = 0; i<arrStr.length;i++){
+        if( arrStr[i] === "-"){
+            arrStr[i] = "_"
+        }
+    }
+    console.log(arrStr.join(""))
+</script>
+</body>
+</html>
