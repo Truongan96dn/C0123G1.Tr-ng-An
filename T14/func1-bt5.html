@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let input = prompt();
+
+    function compareStar() {
+        for (let i = 0; i < arr1.length; i++) {
+            if (input === arr1[i]) {
+                return arr2[i];
+
+            }
+
+        }return "can not find the Star !"
+    }
+
+    document.write(compareStar())
+
+
+</script>
+</body>
+</html>
