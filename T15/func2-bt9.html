@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    let inputStr = prompt(" input anyString !");
+    let arrStr = inputStr.split("");
+    let inputRandom = prompt(" input any Characters !");
+    let count = 0;
+
+    function checkInputChar() {
+        for (let i = 0; i < arrStr.length; i++) {
+            if (inputRandom === arrStr[i]) {
+                count++;
+
+            }
+        }if ( count === 0){
+            return -1 ;
+        }return count;
+    }
+
+    document.write(checkInputChar())
+</script>
+</body>
+</html>
