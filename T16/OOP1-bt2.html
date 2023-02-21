@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(celcius) {
+            this.celcius = celcius;
+        }
+
+        Changefahrenheit() {
+            return (this.celcius * 1.8) + 32;
+        }
+
+        ChangeKelvin() {
+            return this.celcius + 273.15;
+        }
+    }
+
+    let a = +prompt(" input Celsius ");
+    let temperature = new Temperature(a);
+    document.write("F = " +temperature.Changefahrenheit());
+    document.write("<br>");
+    document.write(" K = "+temperature.ChangeKelvin());
+</script>
+</body>
+</html>
