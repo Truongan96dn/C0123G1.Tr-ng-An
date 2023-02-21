@@ -7,15 +7,18 @@
 <body>
 <script>
     let a = +prompt(" nhap vao so a");
-    let b = +prompt(" nhap vao so b")
-    document.write(a,b + " <br>")
-    function swapNum() {
-         let tem = a;
+    let b = +prompt(" nhap vao so b");
+    document.write(a, b + " <br>");
+
+    function swapNum(a, b) {
+        let tem = a;
         a = b;
         b = tem;
-        document.write(a );
-        document.write(b );
-    }swapNum(a,b)
+        document.write(a);
+        document.write(b);
+    }
+
+    swapNum(a, b);
 </script>
 </body>
 </html>

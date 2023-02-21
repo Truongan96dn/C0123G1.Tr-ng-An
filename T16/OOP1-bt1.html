@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<canvas id="Canvas" style="background-color: mediumpurple;height: 50% ; width: 50%"></canvas>
+<script>
+    class Rectangle {
+        constructor(long, wide) {
+            this.long = long;
+            this.wide = wide;
+        }
+
+        getWide() {
+            return this.wide;
+        }
+
+        getLong() {
+            return this.long;
+        }
+
+        setWide(wide) {
+            this.wide = wide;
+        }
+
+        setLong(long) {
+            this.long = long;
+        }
+
+        getArea() {
+            return this.wide * this.long;
+        }
+
+        getPerimeter() {
+            return (this.wide + this.long) * 2;
+        }
+
+        drawCanvas() {
+            let canvas = document.getElementById("Canvas");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'yellow';
+            ctx.fillRect(47, 20, this.wide, this.long);
+
+        }
+    }
+
+    let rectangle = new Rectangle(50, 100);
+    rectangle.setWide(200);
+    rectangle.setLong(100);
+    rectangle.getArea();
+    rectangle.getPerimeter();
+    document.write("<br>");
+    document.write("Area of Rectangle : " + rectangle.getArea());
+    document.write("<br>");
+    document.write("Perimeter of Rectangle : " + rectangle.getPerimeter());
+    rectangle.drawCanvas();
+</script>
+
+</body>
+</html>

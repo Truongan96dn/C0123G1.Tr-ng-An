@@ -10,20 +10,21 @@
     let b = +prompt(" nhap vao so b");
     let c = +prompt(" nhap vao so c");
 
-    function checkMin() {
+    function checkMin(a, b, c) {
         if (a < b) {
             if (a < c) {
                 return a;
             } else {
                 return c;
             }
-        }else if ( c > b){
+        } else if (c > b) {
             return b;
-        }else {
+        } else {
             return c;
         }
     }
-        document.write(checkMin())
+
+    document.write(checkMin(a, b, c));
 </script>
 </body>
 </html>

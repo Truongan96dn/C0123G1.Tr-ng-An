@@ -8,13 +8,14 @@
 <script>
     let a = +prompt();
 
-    function checkNumber() {
+    function checkNumber(a) {
         if (a === parseInt(a) && a > 0) {
             return "true";
+        }
+        return "false";
+    }
 
-
-        }return "false"
-    }document.write(checkNumber())
+    document.write(checkNumber(a));
 </script>
 </body>
 </html>
