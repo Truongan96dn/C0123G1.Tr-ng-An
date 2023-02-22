@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+    }
+
+    class SwitchButton {
+        constructor(lamp, status) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        switchOff() {
+            this.lamp.status = false;
+            return this.status = false;
+        }
+
+        switchOn() {
+            this.lamp.status = true;
+            return this.status = true;
+        }
+    }
+
+    let electricLamp = new ElectricLamp(false);
+
+    let switchButton = new SwitchButton(electricLamp, false);
+
+    for (let i = 0; i < 10; i++) {
+        document.write(switchButton.switchOn() + "<br>");
+        document.write(switchButton.switchOff() + "<br>");
+    }
+</script>
+
+</body>
+</html>

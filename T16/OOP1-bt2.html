@@ -18,10 +18,16 @@
         ChangeKelvin() {
             return this.celcius + 273.15;
         }
+        checkInputTemp(cel){
+            if( cel < -273){
+                alert("Please input temperature over -273 celcius !");
+            }
+        }
     }
 
     let a = +prompt(" input Celsius ");
     let temperature = new Temperature(a);
+    temperature.checkInputTemp(a);
     document.write("F = " +temperature.Changefahrenheit());
     document.write("<br>");
     document.write(" K = "+temperature.ChangeKelvin());
