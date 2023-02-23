@@ -8,8 +8,12 @@
 <script>
     class Temperature {
         constructor(celcius) {
-            while ( celcius <-273){
-                celcius = prompt(" Please input again Celcius over -273 !")
+            while (celcius < -273) {
+                celcius = prompt(" Please input again Celcius over -273");
+                console.log(123123123)
+                console.log(123123123)
+                console.log(123123123)
+
             }
             this.celcius = celcius;
         }
@@ -25,9 +29,9 @@
 
     let a = +prompt(" input Celsius ");
     let temperature = new Temperature(a);
-    document.write("F = " +temperature.changefahrenheit());
+    document.write("F = " + temperature.changefahrenheit());
     document.write("<br>");
-    document.write(" K = "+temperature.changeKelvin());
+    document.write(" K = " + temperature.changeKelvin());
 </script>
 </body>
 </html>
