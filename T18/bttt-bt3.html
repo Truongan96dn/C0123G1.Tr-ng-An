@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let inputN = +prompt(" input limits of arrays");
+    let array = [];
+    for (let i = 0; i < inputN; i++) {
+        array[i] = +prompt(" input Number !");
+    }
+    console.log(array);
+
+    function checkSortOfArr() {
+        let count1 = 0;
+        let count2 = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > array [i + 1]) {
+                count1++;
+            } else if (array[i] < array[i + 1]) {
+                count2++;
+            }
+        }
+        for (let i = 0; i < array.length; i++) {
+            if (count1 === array.length - 1 || count2 === array.length - 1) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    console.log(checkSortOfArr());
+</script>
+</body>
+</html>

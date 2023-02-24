@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let inputN = +prompt(" input limits of arrays");
+    let array = [];
+    let count = 0;
+    for (let i = 0; i < inputN; i++) {
+        array[i] = +prompt(" input Number !");
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[j] === array[i]) {
+                count++;
+            }
+        }
+    }
+    console.log(array);
+    console.log(count);
+
+
+</script>
+</body>
+</html>

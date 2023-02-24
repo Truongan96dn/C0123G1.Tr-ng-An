@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let inputN = +prompt(" input limits of arrays");
+    let array = [];
+    for (let i = 0; i < inputN; i++) {
+        array[i] = +prompt(" input Number !");
+    }
+    console.log(array);
+    let sum = 0;
+    for (let i = 0; i < inputN; i++) {
+        if (array[i] % 2 === 0 && i % 2 !== 0) {
+            sum = sum + array[i];
+        }
+    }
+    console.log("Sum of even and odd-positioned elements : " + sum);
+</script>
+</body>
+</html>
