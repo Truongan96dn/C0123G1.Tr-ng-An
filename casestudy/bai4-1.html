@@ -7,18 +7,14 @@
 <body>
 <script>
     let input = prompt(" input your Fully Name ! ")
-    let arrStr = input.toLowerCase().split("");
-    console.log(arrStr.join(""))
-
-    for ( let )
-    // function changeString(str) {
-        // for (let i = 0; i <arrStr.length ; i++) {
-        //     if (arrStr[i-1]===" "){
-        //         arrStr[i].toUpperCase()
-        //     }
-        //
-        // }return arrStr;
-    // document.write(changeString())
+    let arrStr = input.toUpperCase().split("");
+    let newArray = [];
+    for (let i = 0; i < arrStr.length; i++) {
+        if (i !== 0 || (i > 0 && arrStr[i + 1] !== " ")) {
+            newArray.push(arrStr[i].toLowerCase());
+        }
+    }
+    console.log(newArray);
 
 
     //cach 2
