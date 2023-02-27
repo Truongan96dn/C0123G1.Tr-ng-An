@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let input = +prompt("input the height ");
+    for (let i = 0; i < input; i++) {
+        document.writeln("<br>");
+        for (let j = input - 1; j >= i; j--) {
+            document.writeln("&nbsp&nbsp");
+        }
+        for (let k = 0; k <= i * 2; k++) {
+            if (k === 0 || i === input - 1 || k === (i * 2)) {
+                document.writeln("*");
+            } else {
+                document.writeln("&nbsp&nbsp");
+            }
+        } document.write("<br>");
+    }
+</script>
+</body>
+</html>

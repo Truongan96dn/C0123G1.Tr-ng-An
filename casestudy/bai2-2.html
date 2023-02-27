@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let input = +prompt("input the height ");
+    for (let i = 0; i < input; i++) {
+        document.writeln("<br>");
+        for (let j = input - 1; j >= i; j--) {
+            document.writeln("&nbsp&nbsp");
+        }
+        for (let k = 0; k <= i * 2; k++) {
+            document.writeln("*");
+        }
+    }
+</script>
+</body>
+</html>

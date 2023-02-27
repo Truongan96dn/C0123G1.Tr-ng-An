@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    console.log("1.Cafe");
+    console.log("2.Orange juice");
+    console.log("3.Carrot juice");
+    console.log("4.Tomato juice");
+    console.log("5.Mineral water");
+    console.log("6.Coconut juice ");
+    console.log("7.Finish the Order !");
+    let chosen;
+    let totalPrice = 0;
+    let quantity;
+    do {
+        chosen = +prompt(" Please choose what you want to drink by order number !");
+        switch (chosen) {
+            case 1:
+                alert(" Cafe price of 1 unit is 10000 VND");
+                quantity = +prompt(" How many unit do you want to order ?");
+                totalPrice = quantity * 10000;
+                alert(" your have to pay : " + totalPrice + " VND");
+                break;
+
+            case 2:
+                alert(" Orange juice price of 1 unit is 20000 VND");
+                quantity = +prompt(" How many unit do you want to order ?");
+                totalPrice = quantity * 20000;
+                alert(" your have to pay : " + totalPrice + " VND");
+                break;
+
+
+            case 3:
+                alert(" Carrot juice price of 1 unit is 15000 VND");
+                quantity = +prompt(" How many unit do you want to order ?");
+                totalPrice = quantity * 15000;
+                alert(" your have to pay : " + totalPrice + " VND");
+                break;
+
+            case 4:
+                alert(" Tomato juice price of 1 unit is 17000 VND");
+                quantity = +prompt(" How many unit do you want to order ?");
+                totalPrice = quantity * 17000;
+                alert(" your have to pay : " + totalPrice + " VND");
+                break;
+
+            case 5:
+                alert(" Mineral water price of 1 unit is 5000 VND");
+                quantity = +prompt(" How many unit do you want to order ?");
+                totalPrice = quantity * 5000;
+                alert(" your have to pay : " + totalPrice + " VND");
+                break;
+
+            case 6:
+                alert(" Coconut juice price of 1 unit is 25000 VND");
+                quantity = +prompt(" How many unit do you want to order ?");
+                totalPrice = quantity * 25000;
+                alert(" your have to pay : " + totalPrice + " VND");
+                break;
+        }
+    } while (chosen !== 7);
+
+</script>
+</body>
+</html>

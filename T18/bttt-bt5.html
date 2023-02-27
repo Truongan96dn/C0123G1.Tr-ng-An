@@ -8,17 +8,18 @@
 <script>
     let inputN = +prompt(" input limits of arrays");
     let array = [];
-    let count = 0;
-    for (let i = 0; i < inputN; i++) {
-        array[i] = +prompt(" input Number !");
-        for (let j = i + 1; j < array.length; j++) {
-            if (array[j] === array[i]) {
-                count++;
+    let elements;
+    let flag = true;
+    do {
+        for (let i = 0; i < inputN; i++) {
+            elements = prompt(" nhap vao phan tu " + i);
+            if (array[i] !== elements) {
+                array.push(elements);
+                flag = false;
             }
         }
-    }
-    console.log(array);
-    console.log(count);
+    }while (flag);
+
 
 
 </script>

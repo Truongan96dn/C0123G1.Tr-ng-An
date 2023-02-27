@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2-1</title>
+</head>
+<body>
+<script>
+    let input = +prompt(" input height of Triangle ");
+    for (let i = 0; i < input; i++) {
+        for (let j = 0; j <= i; j++) {
+            if (i === input - 1 || i ===j || j===0) {
+                document.writeln("*");
+            } else {
+                document.writeln("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>");
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3-3</title>
+</head>
+<body>
+<script>
+    let arrayA = [3, 6, 8, 9, 10, 8];
+    let arrayB = [4, 8, 9, 7, 3, 6];
+    let n = arrayA.length;
+    let flag = 0;
+    let biggestFrac = arrayA[0] / arrayB[0];
+    for (let i = 0; i < n; i++) {
+        if (arrayA[i] / arrayB[i] > biggestFrac) {
+            biggestFrac = arrayA[i] / arrayB[i];
+            flag = i;
+        }
+
+    }
+    document.write("Biggest Fration is " + biggestFrac);
+    document.write("<br>");
+    document.write("index of biggest Fraction is : " + flag);
+
+</script>
+</body>
+</html>

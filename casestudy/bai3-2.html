@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3-2</title>
+</head>
+<body>
+<script>
+    let arrayA = [7, 2, 5, 3, 5, 3];
+    let arrayB = [7, 2, 5, 4, 6, 3, 5, 3, 9];
+    for (let i = 0; i < arrayB.length; i++) {
+        for (let j = 0; j < arrayA.length; j++) {
+            if (arrayB[i] === arrayA[j]) {
+                arrayB.splice(i, 1);
+            }
+        }
+    }
+    document.write(arrayB);
+
+</script>
+</body>
+</html>

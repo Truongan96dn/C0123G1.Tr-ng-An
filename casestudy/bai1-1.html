@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<label>Nhap luong nhan vien</label>
+<br>
+<input type="number" id="income">Trieu Dong
+<button onclick="checkSalaryandTax()">checkSalaryandTax</button>
+
+<script>
+    function checkSalaryandTax() {
+        let input = document.getElementById("income").value;
+        let outcome;
+        let tax;
+        if (input <= 7) {
+            outcome = input - ((5 * input) / 100);
+            tax = (5 * input) / 100;
+        } else if (input < 15) {
+            outcome = input - ((10 * input) / 100);
+            tax = (10 * input) / 100;
+        } else {
+            outcome = input - ((20 * input) / 100);
+            tax = (20 * input) / 100;
+        }
+        document.write("your outcome is : " + outcome + " Trieu Dong");
+        document.write("<br>");
+        document.write("Your Tax is : " + tax + " Trieu Dong");
+    }
+
+</script>
+</body>
+</html>
