@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5-2</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập độ dài của mảng ");
+    let arr = new Array(n)
+    for (let i = 0; i < arr.length; i++) {
+        let arr1 = [];
+        let m = +prompt("Nhập độ dài phần từ con thứ " + (i + 1));
+        for (let j = 0; j < m; j++) {
+            arr1[j] = +prompt("Nhập phần giá trị thứ " + (j + 1));
+            arr[i] = arr1;
+        }
+    }
+    console.log(arr)
+
+    function checkPrime() {
+        let flag = true;
+        let count = 0;
+        let arrPrime = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] < 2) {
+                    flag = false;
+                } else {
+                    flag = true;
+                    for (let k = 2; k < arr[i][j]; k++) {
+                        if (arr[i][j] % k === 0) {
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if (flag) {
+                        count++;
+                        arrPrime.push(arr[i][j]);
+                    }
+                }
+            }
+        }
+        console.log("các phần tử số nguyên tố có trong ma trận là : " + arrPrime);
+        console.log("số lượng số nguyên tố có trong ma trận : " + count);
+    }
+    checkPrime();
+</script>
+</body>
+</html>

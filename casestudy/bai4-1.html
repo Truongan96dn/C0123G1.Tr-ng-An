@@ -6,28 +6,33 @@
 </head>
 <body>
 <script>
-    let input = prompt(" input your Fully Name ! ")
-    let arrStr = input.toUpperCase().split("");
-    let newArray = [];
-    for (let i = 0; i < arrStr.length; i++) {
-        if (i !== 0 || (i > 0 && arrStr[i + 1] !== " ")) {
-            newArray.push(arrStr[i].toLowerCase());
+    function CheckString(str) {
+        let arr = str.toLowerCase().split(" ");
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]==="" && arr[i+1]===""){
+                arr.splice(i,1);
+                i--;
+            }
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1);
         }
+        console.log(arr)
+        return arr.join(' ');
     }
-    console.log(newArray);
 
+    function findString(arr) {
+        let max = arr[0];
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > max) {
+                max = arr[j];
+            }
+        }
+        return max;
+    }
 
-    //cach 2
-    // function titleCase(str) {
-    //     let convertToArray = str.toLowerCase().split(' ');
-    //     let result = convertToArray.map(function(val) {
-    //         return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
-    //     });
-    //     return result.join(' ');
-    // }
-    // let input = prompt(" input your name ! ");
-    //
-    // console.log(titleCase(input));
+    let a = prompt("Nhập chuỗi bạn muốn chuyển đổi: ");
+    console.log("Chuỗi từ bạn vừa nhập sau khi chuyển đổi: " + CheckString(a) );
+    let array = CheckString(a).split(' ');
+    console.log('Chữ dài nhất trong chuỗi là: ' + findString(array));
 </script>
 </body>
 </html>

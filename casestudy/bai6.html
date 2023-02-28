@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    class Student {
+        constructor( name, classes, email, birthday) {
+            this.name = name;
+            this.classes = classes;
+            this.email = email;
+            this.birthday = birthday;
+        }
+    }
+    let student1= new Student("Ho Truong An ", "C0123G1","hotruongandn@gmail.com","01/02/1996");
+    let student2= new Student("Nguyen Viet Cao ", "C0123G1","vietcaodn@gmail.com","02/02/2000");
+    let student3= new Student("Nguyen Phuc Quy ", "C0123G1","phucquydn@gmail.com","19/02/1988");
+    let studentList = [];
+    studentList.push(student1);
+    studentList.push(student2);
+    studentList.push(student3);
+    displayStudentList(studentList)
+
+
+    function displayStudentList(studentlist) {
+        let table = "<table border='1' style='border-collapse: collapse'>";
+        table += "<tr>" +
+            "<th>Mã học viên</th>" +
+            "<th>Tên</th>" +
+            "<th>Lớp</th>" +
+            "<th>Email</th>" +
+            "<th>Ngày sinh</th>" +
+            "<th colspan='2'>Chỉnh sửa</th>" +
+            "</tr>"
+        for (let i = 0; i < studentlist.length; i++) {
+            table += "<tr>"+
+                "<td>+ 'HV'- (i + 1) +</td>"+
+                "<td>+ studenList[i].name +</td>"+
+                "<td>+ studenList[i].classes +</td>"+
+                "<td>+ studenList[i].email +</td>"+
+                "<td>+ studenList[i].birthday +</td>"+
+                "<td></td>"
+        }
+
+
+
+
+    }
+    document.write();
+</script>
+</body>
+</html>

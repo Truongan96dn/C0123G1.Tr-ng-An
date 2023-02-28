@@ -8,17 +8,16 @@
 <script>
     let str = prompt(" input any character");
     let arrStr = str.split('');
-    let count = 1  ;
-    let count1 = 0;
-    console.log(arrStr)
-    for (let i = 0; i < arrStr.length-1; i++) {
-        if (arrStr[0] !== arrStr[i]) {
-            count++;
+    for (let i = 0; i < arrStr.length; i++) {
+        for (let j = i + 1; j < arrStr.length; j++) {
+            if (arrStr[i] === arrStr[j]) {
+                arrStr.splice(j, 1);
+                j--;
+            }
         }
     }
-    console.log(arrStr);
-    console.log(count);
-    console.log(count1);
+    console.log("array before change: " + str);
+    console.log("Count Different Elements : " + arrStr.length);
 
 
 </script>

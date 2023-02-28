@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4-3</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let s2 = "adcaa";
+    let s3 = s1.split("");
+    let s4 = s2.split("");
+    let array = [];
+    for (let i = 0; i < s3.length; i++) {
+        for (let j = 0; j < s4.length; j++) {
+            if (s3[i] === s4[j]) {
+                array.push(s3[i]);
+                s3.splice(i, 1);
+                s4.splice(j, 1);
+            }
+        }
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        let count = 1;
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[i] === array[j]) {
+                count++;
+                array.splice(j, 1);
+                j--;
+            }
+        }
+        document.write("có" + count + ' ký tự ' + array[i] + '<br>');
+
+    }
+
+</script>
+
+</body>
+</html>

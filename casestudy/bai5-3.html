@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5-3</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập độ dài của mảng ");
+    let arr = new Array(n)
+    for (let i = 0; i < arr.length; i++) {
+        let arr1 = [];
+        let m = +prompt("Nhập độ dài phần từ con thứ " + (i + 1));
+        for (let j = 0; j < m; j++) {
+            arr1[j] = +prompt("Nhập phần giá trị thứ " + (j + 1));
+            arr[i] = arr1;
+        }
+    }
+    console.log(arr)
+
+    function checkMinMax() {
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+        }
+        console.log("phần tử có giá trị lớn nhất trong mảng là : " + max);
+        let min = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        console.log("phần tử có giá trị nhỏ nhất trong mảng là : " + min);
+    }
+    checkMinMax();
+</script>
+</body>
+</html>
