@@ -5,18 +5,78 @@
     <title>bai6</title>
 </head>
 <body>
+<div>
+    <form>
+        <h2 style="color: cyan">Biểu mẫu thêm - sửa học sinh</h2>
+        <label for="nameStudent">Tên học sinh</label>
+        <input type="text" placeholder="Nhập tên học sinh" id="nameStudent">
+        <label>Email</label>
+        <input type="text" placeholder="Nhập email" id="email">
+        <br>
+        <label for="classes">Lớp</label>
+        <select id ="classes" >
+            <option disabled selected value="-1">Chọn Lớp</option>
+            <option>C0123G1</option>
+            <option>C0223G1</option>
+            <option>C0323G3</option>
+            <option>C0423G4</option>
+            <option>C0523G5</option>
+        </select>
+        <label for="birthday">Ngày sinh</label>
+        <input type="date" id="birthday">
+        <br>
+        <button type="button" onclick="createStudent()">Thêm mới</button>
+        <button type="reset">Refresh</button>
+    </form>
+</div>
+<hr>
+<h2 style="color: #FA8176">Danh sách các học sinh</h2>
+<div id="tableStudentList"></div>
 <script>
     class Student {
-        constructor( name, classes, email, birthday) {
+        constructor(name, classes, email, birthday) {
             this.name = name;
             this.classes = classes;
             this.email = email;
             this.birthday = birthday;
         }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getClasses() {
+            return this.classes;
+        }
+
+        setClasses(classes) {
+            this.classes = classes;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+
+        getBirthday() {
+            return this.birthday;
+        }
+
+        setBirthday(birthday) {
+            this.birthday = birthday;
+        }
     }
-    let student1= new Student("Ho Truong An ", "C0123G1","hotruongandn@gmail.com","01/02/1996");
-    let student2= new Student("Nguyen Viet Cao ", "C0123G1","vietcaodn@gmail.com","02/02/2000");
-    let student3= new Student("Nguyen Phuc Quy ", "C0123G1","phucquydn@gmail.com","19/02/1988");
+
+    let student1 = new Student("Ho Truong An ", "C0123G1", "hotruongandn@gmail.com", "1996-02-01");
+    let student2 = new Student("Nguyen Viet Cao ", "C0123G1", "vietcaodn@gmail.com", "2000-05-21");
+    let student3 = new Student("Nguyen Phuc Quy ", "C0123G1", "phucquydn@gmail.com", "1988-06-13");
     let studentList = [];
     studentList.push(student1);
     studentList.push(student2);
@@ -35,20 +95,96 @@
             "<th colspan='2'>Chỉnh sửa</th>" +
             "</tr>"
         for (let i = 0; i < studentlist.length; i++) {
-            table += "<tr>"+
-                "<td>+ 'HV'- (i + 1) +</td>"+
-                "<td>+ studenList[i].name +</td>"+
-                "<td>+ studenList[i].classes +</td>"+
-                "<td>+ studenList[i].email +</td>"+
-                "<td>+ studenList[i].birthday +</td>"+
-                "<td></td>"
+            table += "<tr>" +
+                '<td>' + "HV-" + convertNum(i+1) + '</td>' +
+                '<td>' + studentList[i].name + '</td>' +
+                '<td>' + studentList[i].classes + '</td>' +
+                '<td>' + studentList[i].email + '</td>' +
+                '<td>' + studentList[i].birthday + '</td>' +
+                "<td><button onclick=\"deleteStudent(" + i + ")\">Xoá</button></td>" +
+                "<td><button onclick=\"updateStudent(" + i + ")\">Sửa</button></td>" +
+                "</tr>";
+        }
+        table += "</table>";
+        document.getElementById("tableStudentList").innerHTML = table;
+    }
+    function convertNum(num) {
+        if(num < 10) {
+            return "000" + num;
+        } else if(num < 100) {
+            return "00" + num;
         }
 
-
-
-
     }
-    document.write();
+    function deleteStudent(indexStudent) {
+        const confirmDelete = confirm("Bạn muốn xoá học sinh " +
+            studentList[indexStudent].name + " không ?");
+        if (confirmDelete) {
+            studentList.splice(indexStudent, 1);
+            alert("Bạn đã xoá thành công.");
+            displayStudentList(studentList);
+        } else {
+            alert("Bạn đã không xoá.");
+        }
+    }
+
+    function createStudent() {
+            let name = document.getElementById("nameStudent").value;
+            let birthday = document.getElementById("birthday").value;
+            let email = document.getElementById("email").value;
+            let classes = document.getElementById("classes").value;
+            let newStudent = new Student(name, classes, email, birthday);
+            studentList.push(newStudent);
+            displayStudentList(studentList);
+            document.getElementById("nameStudent").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("classes").value = "";
+            document.getElementById("birthday").value = "";
+    }
+
+    displayStudentList()
+
+    function updateStudent(indexStudent) {
+        let input;
+        const confirmUpdate = confirm("Bạn muốn sửa học sinh " +
+            studentList[indexStudent].name + " không ?");
+        if (confirmUpdate) {
+            do {
+                input = +prompt("1. fix Name \n" +
+                    "2.fix Classes \n" +
+                    "3.fix Bithday \n" +
+                    "4.fix email \n" +
+                    "5. kết thúc chỉnh sửa")
+                switch (input) {
+                    case 1 :
+                        let a = prompt(" input new name")
+                        studentList[indexStudent].setName(a);
+                        alert("bạn đã sửa tên thành công !")
+                        break;
+                    case 2:
+                        let b = prompt(" input new classes")
+                        studentList[indexStudent].setClasses(b);
+                        alert("bạn đã sửa lớp thành công !")
+                        break;
+                    case 3:
+                        let c = prompt(" input new Birthday")
+                        studentList[indexStudent].setBirthday(c);
+                        alert("bạn đã sửa ngày sinh thành công !")
+                        break;
+                    case 4:
+                        let d = prompt(" input new email")
+                        studentList[indexStudent].setClasses(d);
+                        alert("bạn đã sửa email thành công !")
+                        break;
+
+                }
+                displayStudentList(studentList)
+
+            } while (input !== 5)
+        }else {
+            alert("bạn đã không sửa !")
+        }
+    }
 </script>
 </body>
 </html>

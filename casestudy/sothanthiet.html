@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let a = +prompt(" input so bat ky")
+    let b= 284;
+    let sum = 0 ;
+    for (let i = 1; i < a ; i++) {
+        if( a % i === 0){
+            console.log(i)
+            sum += i;
+        }
+
+    }
+    console.log(sum)
+    if( sum === b ){
+        alert(" so than thiet");
+    }else {
+        alert(" khong phai so than thiet !");
+    }
+</script>
+</body>
+</html>

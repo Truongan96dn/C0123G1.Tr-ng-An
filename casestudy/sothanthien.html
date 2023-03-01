@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sothanthien</title>
+</head>
+<body>
+<script>
+    let a = +prompt(" nhap so A");
+    let b = +prompt(" nhap so B");
+    let suma = 0;
+    let sumb = 0;
+    let abudancyA;
+    let abudancyB;
+
+    for (let i = 1; i <= a; i++) {
+        if (a % i === 0) {
+            suma += i;
+        }
+    }
+    abudancyA = suma / a
+    console.log(suma)
+    for (let i = 1; i <= b; i++) {
+        if (b % i === 0) {
+            sumb += i;
+        }
+    }
+    abudancyB = sumb / b
+    if (abudancyA === abudancyB) {
+        alert(" la cap so than thien !")
+    } else {
+        alert(" khong la cap so than thien")
+    }
+    console.log(sumb);
+</script>
+</body>
+</html>
